@@ -63,8 +63,8 @@ with col2:
     
     with col1:
         if st.button("💻 Open Project Code"):
-            st.markdown("[Click here to view the project code](https://github.com/your_project_repo)")
+            webbrowser.open_new_tab("https://github.com/your_project_repo")
     
     with col2:
         if st.button("🌐 Visit My Portfolio"):
-            st.markdown("[Click here to visit my portfolio](https://yourportfolio.com)")
+            webbrowser.open_new_tab("https://yourportfolio.com")
