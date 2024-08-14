@@ -1,5 +1,6 @@
 import streamlit as st
 import base64
+import webbrowser
 
 st.set_page_config(page_title="My Homepage", page_icon='🏡', layout="wide")
 st.markdown('<style>div.block-container{padding-top:2.5rem;}</style>',unsafe_allow_html=True)
