@@ -7,7 +7,7 @@ import pandas as pd
 
 warnings.filterwarnings('ignore')
 
-dataset_url = https://github.com/BipinChowdary/projectfuel.github.io/blob/5d6461d340bbd1b7d28d08d81a4e43f7b43739ca/DATASET/Vehicle%20MPG%20-%201984%20to%202023.csv
+dataset_url = "https://raw.githubusercontent.com/BipinChowdary/projectfuel.github.io/main/DATASET/Vehicle%20MPG%20-%201984%20to%202023.csv"
 df = pd.read_csv(dataset_url)
 
 st.set_page_config(page_title="Model Finder", page_icon=':car:', layout="wide")
