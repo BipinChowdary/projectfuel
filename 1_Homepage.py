@@ -67,4 +67,4 @@ with col2:
     
     with col2:
         if st.button("🌐 Visit My Portfolio"):
-            webbrowser.open_new_tab("https://yourportfolio.com")
+            webbrowser.open_new_tab("https://bipinchowdary.github.io/")
