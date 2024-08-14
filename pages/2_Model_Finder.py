@@ -52,7 +52,7 @@ div.block-container {{
 st.markdown(custom_css, unsafe_allow_html=True)
 
 st.markdown('<h1 class="title">🚗 Model Finder</h1>', unsafe_allow_html=True)
-df = pd.read_csv(dataset_path)
+df = pd.read_csv(dataset_url)
 
 df['Fuel Efficiency (MPG)'] = df['Combined MPG (Fuel Type 1)']
 co2_emission_factor = 19.6
