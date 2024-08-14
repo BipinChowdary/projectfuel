@@ -33,8 +33,8 @@ div.block-container {{
 st.set_page_config(page_title="Dataset Viewer", page_icon='📝', layout="wide")
 st.markdown(custom_css, unsafe_allow_html=True)
 st.markdown('<h1 class="stTitle">📝 DataSet</h1>', unsafe_allow_html=True)
-dataset_path = os.path.join("dataset", "Vehicle MPG - 1984 to 2023.csv")
-df = pd.read_csv(dataset_path)
+dataset_url = "https://raw.githubusercontent.com/BipinChowdary/projectfuel.github.io/main/DATASET/Vehicle%20MPG%20-%201984%20to%202023.csv"
+df = pd.read_csv(dataset_url)
 total_rows = len(df)
 
 divider_style = """
