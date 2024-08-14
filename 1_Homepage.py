@@ -1,9 +1,9 @@
 import streamlit as st
 import base64
-import webbrowser
 
 st.set_page_config(page_title="My Homepage", page_icon='🏡', layout="wide")
-st.markdown('<style>div.block-container{padding-top:2.5rem;}</style>',unsafe_allow_html=True)
+st.markdown('<style>div.block-container{padding-top:2.5rem;}</style>', unsafe_allow_html=True)
+
 def load_font(font_path):
     with open(font_path, "rb") as font_file:
         font_data = font_file.read()
@@ -46,12 +46,11 @@ st.markdown(custom_css, unsafe_allow_html=True)
 st.markdown('<h1 class="title">🏡 Fuel Efficiency Prediction</h1>', unsafe_allow_html=True)
 
 st.write(' ')
-col1,_,col2 = st.columns([4,0.5,5.5])
+col1, _, col2 = st.columns([4, 0.5, 5.5])
 
 with open('images/header.png', 'rb') as f:
     image = f.read()
     col1.image(image, width=500)
-
 
 col2.markdown(custom_css, unsafe_allow_html=True)
 col2.markdown('<h4 class="title2">Why Fuel Efficiency Prediction Is Useful ?</h4><p class="gradient-divider"></p>', unsafe_allow_html=True)
@@ -60,10 +59,10 @@ col2.write('Fuel efficiency prediction contributes significantly to pollution re
 
 with col2:
     st.write(" ")
-    col1, col2 = st.columns(2)
-    
+    col1, col2 = st.columns([3, 2.3])
     with col1:
-        st.markdown('<a href="https://github.com/your_project_repo" target="_blank"><button>💻 Open Project Code</button></a>', unsafe_allow_html=True)
-    
+        if st.button("Open Project Code"):
+            st.write('<a href="https://github.com/your-repo-url" target="_blank">View on GitHub</a>', unsafe_allow_html=True)
     with col2:
-        st.markdown('<a href="https://yourportfolio.com" target="_blank"><button>🌐 Visit My Portfolio</button></a>', unsafe_allow_html=True)
+        if st.button("Visit My Portfolio"):
+            st.write('<a href="https://your-portfolio-url" target="_blank">My Portfolio</a>', unsafe_allow_html=True)
