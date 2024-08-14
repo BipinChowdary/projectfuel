@@ -43,6 +43,6 @@ st.markdown(custom_css, unsafe_allow_html=True)
 st.markdown('<b class="stTitle">🧑‍💻Results</b><div class="gradient-divider"></div>', unsafe_allow_html=True)
 col1, col2 = st.columns([5,5])
 with col1:
-    st.image('images\output.png')
+    st.image('https://github.com/BipinChowdary/projectfuel.github.io/blob/main/images/output.png')
 with col2:
     st.image('images\output2.png')   
