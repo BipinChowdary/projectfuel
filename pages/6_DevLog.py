@@ -18,8 +18,8 @@ from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
 st.set_page_config(page_title="Log Files",page_icon='🗃️',layout="wide")
 st.title("🗃️ DevLog - Check Terminal")
 st.markdown('<style>div.block-container{padding-top:1.5rem;}</style>',unsafe_allow_html=True)
-dataset_path = os.path.join("dataset", "Vehicle MPG - 1984 to 2023.csv")
-df = pd.read_csv(dataset_path)
+dataset_url = "https://raw.githubusercontent.com/BipinChowdary/projectfuel.github.io/main/DATASET/Vehicle%20MPG%20-%201984%20to%202023.csv"
+df = pd.read_csv(dataset_url)
 
 df['Fuel Efficiency (MPG)'] = df['Combined MPG (Fuel Type 1)']
 co2_emission_factor = 19.6
