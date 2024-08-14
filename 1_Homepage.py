@@ -61,11 +61,9 @@ col2.write('Fuel efficiency prediction contributes significantly to pollution re
 with col2:
     st.write(" ")
     col1, col2 = st.columns(2)
-        
+    
     with col1:
-        if st.button("💻 Open Project Code"):
-            webbrowser.open_new_tab("https://github.com/your_project_repo")
-        
+        st.markdown('<a href="https://github.com/your_project_repo" target="_blank"><button>💻 Open Project Code</button></a>', unsafe_allow_html=True)
+    
     with col2:
-        if st.button("🌐 Visit My Portfolio"):
-            webbrowser.open_new_tab("https://bipinchowdary.github.io/")
+        st.markdown('<a href="https://yourportfolio.com" target="_blank"><button>🌐 Visit My Portfolio</button></a>', unsafe_allow_html=True)
