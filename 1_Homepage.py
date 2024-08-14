@@ -57,6 +57,5 @@ col2.write('Fuel efficiency prediction contributes significantly to pollution re
 
 with col2:
     st.write(" ")
-    st.write(" ")
     if st.button("🔗 Open Project Page"):
         st.markdown("[Click here to visit the project page](https://projectfuel.github.io)")
