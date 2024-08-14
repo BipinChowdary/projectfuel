@@ -58,25 +58,32 @@ col2.markdown('<h4 class="title2">Why Fuel Efficiency Prediction Is Useful ?</h4
 col2.write('Fuel efficiency prediction contributes significantly to pollution reduction by promoting the adoption of cleaner and more sustainable transportation options. By accurately forecasting fuel consumption, our project empowers individuals and businesses to make informed decisions that prioritize vehicles with lower emissions and higher fuel efficiency ratings. Moreover, our fuel efficiency prediction project facilitates the development and deployment of innovative technologies aimed at enhancing vehicle performance while minimizing environmental impact. Ultimately, our efforts in fuel efficiency prediction contribute to a cleaner, healthier planet for present and future generations.')
 
 with col2:
-    st.write(" ")
-    col1, col2, col3, col4, col5 = st.columns([2, 2.3, 2.4, 2.3, 3])
+import streamlit as st
+
+# Define your columns
+col1, col2, col3, col4, col5 = st.columns([2, 2.3, 2.4, 2.3, 3])
 
 with col1:
     if st.button("💻 CODE"):
-        st.markdown('<a href="http://your-github-username.github.io/pages/6_Code.html" target="_blank">💻 CODE</a>', unsafe_allow_html=True)
+        st.session_state.page = "pages/6_Code"
 
 with col2:
     if st.button(":car: Model Finder"):
-        st.markdown('<a href="https://projectfuel.streamlit.app/Model_Finder" target="_blank">:car: Model Finder</a>', unsafe_allow_html=True)
+        st.session_state.page = "pages/2_Model_finder"
 
 with col3:
     if st.button(":bar_chart: Charts"):
-        st.markdown('<a href="https://projectfuel.streamlit.app/Charts" target="_blank">:bar_chart: Charts</a>', unsafe_allow_html=True)
+        st.session_state.page = "pages/3_Charts"
 
 with col4:
     if st.button("📝 Datasets"):
-        st.markdown('<a href="https://projectfuel.streamlit.app/Dataset" target="_blank">📝 Datasets</a>', unsafe_allow_html=True)
+        st.session_state.page = "pages/4_Dataset"
 
 with col5:
     if st.button("🧑‍💻 Results"):
-        st.markdown('<a href="https://projectfuel.streamlit.app/Results" target="_blank">🧑‍💻 Results</a>', unsafe_allow_html=True)
+        st.session_state.page = "pages/5_Results"
+
+# Function to switch pages based on session state
+if 'page' in st.session_state:
+    st.experimental_rerun()
+
