@@ -59,16 +59,24 @@ col2.write('Fuel efficiency prediction contributes significantly to pollution re
 
 with col2:
     st.write(" ")
-    col1, col2, col3, col4 = st.columns([3, 2.3, 2.4, 2.3])
-    with col1:
-        if st.button(":car: Model Finder"):
-            st.switch_page("pages/2_Model_finder.py")
-    with col2:
-        if st.button(":bar_chart: Charts  "):
-            st.switch_page("pages/3_Charts.py")
-    with col3:
-        if st.button("📝 Datasets  "):
-            st.switch_page("pages/4_Dataset.py")
-    with col4:
-        if st.button("🧑‍💻 Results"):
-            st.switch_page("pages/5_Results.py")
+    col1, col2, col3, col4, col5 = st.columns([2, 2.3, 2.4, 2.3, 3])
+
+with col1:
+    if st.button("💻 CODE"):
+        st.markdown('<a href="http://your-github-username.github.io/pages/6_Code.html" target="_blank">💻 CODE</a>', unsafe_allow_html=True)
+
+with col2:
+    if st.button(":car: Model Finder"):
+        st.markdown('<a href="https://projectfuel.streamlit.app/Model_Finder" target="_blank">:car: Model Finder</a>', unsafe_allow_html=True)
+
+with col3:
+    if st.button(":bar_chart: Charts"):
+        st.markdown('<a href="https://projectfuel.streamlit.app/Charts" target="_blank">:bar_chart: Charts</a>', unsafe_allow_html=True)
+
+with col4:
+    if st.button("📝 Datasets"):
+        st.markdown('<a href="https://projectfuel.streamlit.app/Dataset" target="_blank">📝 Datasets</a>', unsafe_allow_html=True)
+
+with col5:
+    if st.button("🧑‍💻 Results"):
+        st.markdown('<a href="https://projectfuel.streamlit.app/Results" target="_blank">🧑‍💻 Results</a>', unsafe_allow_html=True)
