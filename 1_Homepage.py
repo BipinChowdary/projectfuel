@@ -61,8 +61,6 @@ with col2:
     st.write(" ")
     col1, col2 = st.columns([3, 2.3])
     with col1:
-        if st.button("Open Project Code"):
-            st.write('<a href="https://github.com/your-repo-url" target="_blank">View on GitHub</a>', unsafe_allow_html=True)
+        st.markdown('<a href="https://github.com/your-repo-url" target="_blank"><button style="width:100%; height:50px; background-color:#4CAF50; color:white; border:none; border-radius:5px; cursor:pointer;">Open Project Code</button></a>', unsafe_allow_html=True)
     with col2:
-        if st.button("Visit My Portfolio"):
-            st.write('<a href="https://your-portfolio-url" target="_blank">My Portfolio</a>', unsafe_allow_html=True)
+        st.markdown('<a href="https://your-portfolio-url" target="_blank"><button style="width:100%; height:50px; background-color:#008CBA; color:white; border:none; border-radius:5px; cursor:pointer;">Visit My Portfolio</button></a>', unsafe_allow_html=True)
