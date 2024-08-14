@@ -47,8 +47,8 @@ st.markdown(custom_css, unsafe_allow_html=True)
 
 st.markdown('<h1 class="stTitle">📊 Charts</h1>', unsafe_allow_html=True)
 
-dataset_path = os.path.join("dataset", "Vehicle MPG - 1984 to 2023.csv")
-df = pd.read_csv(dataset_path)
+dataset_url = "https://raw.githubusercontent.com/BipinChowdary/projectfuel.github.io/main/DATASET/Vehicle%20MPG%20-%201984%20to%202023.csv"
+df = pd.read_csv(dataset_url)
 df['Fuel Efficiency (MPG)'] = df['Combined MPG (Fuel Type 1)']
 co2_emission_factor = 19.6
 df['Fuel Consumption (gallons/mile)'] = df['Estimated Annual Petrolum Consumption (Barrels)'] / 365  
