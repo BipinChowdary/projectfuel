@@ -60,7 +60,6 @@ col2.write('Fuel efficiency prediction contributes significantly to pollution re
 with col2:
 import streamlit as st
 
-# Define your columns
 col1, col2, col3, col4, col5 = st.columns([2, 2.3, 2.4, 2.3, 3])
 
 with col1:
@@ -86,4 +85,3 @@ with col5:
 # Function to switch pages based on session state
 if 'page' in st.session_state:
     st.experimental_rerun()
-
